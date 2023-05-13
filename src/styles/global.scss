@@ -1,0 +1,21 @@
+@import "./vars.scss";
+html {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: unset;
+    }
+    body {
+        .container {
+            width: min(100% - 20px, 1240px);
+            margin-inline: auto;
+        }
+        #__next {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+    }
+}

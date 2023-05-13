@@ -1,0 +1,48 @@
+@import "../../../styles/vars.scss";
+.header {
+    width: 100%;
+    padding: 20px 0px;
+    .header_inner {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            display: grid;
+            grid-template-columns: auto auto;
+            transition: all 0.2s ease;
+            grid-column-gap: 5px;
+            &:hover {
+                opacity: 0.9;
+            }
+            span {
+                font-size: 30px;
+                color: $primary_3;
+            }
+        }
+        nav {
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-column-gap: 30px;
+            align-items: center;
+            a {
+                color: $primary_3;
+                font-size: $fz_text;
+                transition: all 0.2s ease;
+                // &.active {
+                // }
+                &:nth-of-type(6) {
+                    border: 2px solid $primary_3;
+                    background-color: $primary_3;
+                    color: #fff;
+                    padding: 6px 30px;
+                    border-radius: 4px;
+                    &:hover {
+                        background-color: #fff;
+                        color: $primary_3;
+                    }
+                }
+            }
+        }
+    }
+}

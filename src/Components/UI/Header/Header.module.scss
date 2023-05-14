@@ -2,6 +2,9 @@
 .header {
     width: 100%;
     padding: 20px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
     .header_inner {
         display: grid;
         grid-template-columns: repeat(2, auto);
@@ -16,7 +19,7 @@
                 opacity: 0.9;
             }
             span {
-                font-size: 30px;
+                font-size: 25px;
                 color: $primary_3;
             }
         }
@@ -31,6 +34,9 @@
                 transition: all 0.2s ease;
                 // &.active {
                 // }
+                &:hover {
+                    transform: translate(-2px, -2px);
+                }
                 &:nth-of-type(6) {
                     border: 2px solid $primary_3;
                     background-color: $primary_3;
@@ -38,6 +44,7 @@
                     padding: 6px 30px;
                     border-radius: 4px;
                     &:hover {
+                        transform: translate(0px, 0px);
                         background-color: #fff;
                         color: $primary_3;
                     }
@@ -46,3 +53,5 @@
         }
     }
 }
+// ! Media
+@import "headerMedia.scss";

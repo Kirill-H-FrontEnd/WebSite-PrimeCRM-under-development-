@@ -1,12 +1,13 @@
 // Styles
-import s from "./Header.module.scss";
+import s from "./header.module.scss";
 // Router
 import Link from "next/link";
 // Components
-import { FC } from "react";
+import { FC, SetStateAction } from "react";
 import Image from "next/image";
 import { Jost } from "next/font/google";
 import { useRouter } from "next/router";
+import BurgerMenu from "../BurgerMenu/burgerMenu";
 
 const font_link = Jost({
   subsets: ["latin"],
@@ -16,11 +17,20 @@ const font_logo = Jost({
   subsets: ["latin"],
   weight: ["700"],
 });
-interface IProps {}
+interface IHeader {
+  isBurgerActive: boolean;
+  isToggleMenuActive: boolean;
+  setBurger: React.Dispatch<SetStateAction<boolean>>;
+  setToggleMenu: React.Dispatch<SetStateAction<boolean>>;
+}
 
-const Header: FC = ({}) => {
+const Header: FC<IHeader> = ({
+  isBurgerActive,
+  setBurger,
+  setToggleMenu,
+  isToggleMenuActive,
+}) => {
   const { asPath } = useRouter();
-  console.log(asPath);
   let navLinksData = [
     { value: "Solution", href: "/" },
     { value: "Industries", href: "/industries" },
@@ -34,7 +44,7 @@ const Header: FC = ({}) => {
       <div className="container">
         <section className={s.header_inner}>
           <Link href="/" className={s.logo} style={font_logo.style}>
-            <Image src={"/Logo.svg"} alt="logo" width={40} height={40} />
+            <Image src={"/Logo.svg"} alt="logo" width={35} height={35} />
             <span>PrimeCRM</span>
           </Link>
           <nav>
@@ -49,6 +59,12 @@ const Header: FC = ({}) => {
               </Link>
             ))}
           </nav>
+          <BurgerMenu
+            isBurgerActive={isBurgerActive}
+            setBurger={setBurger}
+            setToggleMenu={setToggleMenu}
+            isToggleMenuActive={isToggleMenuActive}
+          />
         </section>
       </div>
     </header>

@@ -1,3 +1,4 @@
+@import "hamburgers-master/_sass/hamburgers/hamburgers.scss";
 @import "./vars.scss";
 html {
     * {
@@ -16,6 +17,16 @@ html {
             display: grid;
             grid-template-rows: auto 1fr auto;
             height: 100vh;
+        }
+        // Scroll-bar
+        &::-webkit-scrollbar {
+            background-color: #fff;
+            width: 12px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba($color: $primary_1, $alpha: 1);
+            border-radius: 10px;
+            border: 3px solid #fff;
         }
     }
 }

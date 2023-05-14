@@ -1,0 +1,29 @@
+@import "../../../styles/vars.scss";
+.toggleMenu_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: $primary_3;
+    padding: 20px 0px 0px 20px;
+    transform: translate(-300px, 0px);
+    transition: all 0.2s ease;
+    &.active {
+        transform: translate(0px, 0px);
+    }
+    .logo {
+        display: grid;
+        grid-template-columns: auto auto;
+        transition: all 0.2s ease;
+        grid-column-gap: 5px;
+        justify-content: start;
+        &:hover {
+            opacity: 0.9;
+        }
+        span {
+            font-size: 22px;
+            color: #fff;
+        }
+    }
+}

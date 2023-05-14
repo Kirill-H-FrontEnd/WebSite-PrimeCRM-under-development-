@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren, useState } from "react";
 
 import Meta from "@/Components/Seo/Meta";
 import { IMeta } from "@/Components/Seo/meta.interface";
@@ -6,6 +6,7 @@ import Header from "./UI/Header/header";
 import Footer from "./UI/Footer/footer";
 
 import { Open_Sans } from "next/font/google";
+import ToggleMenu from "./UI/ToggleMenu/toggleMenu";
 
 const font = Open_Sans({
   subsets: ["latin"],
@@ -14,10 +15,18 @@ const font = Open_Sans({
 interface Props {}
 
 const Layout: FC<PropsWithChildren<IMeta>> = ({ children, title }) => {
+  const [isBurgerActive, setBurger] = useState(false);
+  const [isToggleMenuActive, setToggleMenu] = useState(false);
   return (
     <Meta title={title}>
-      <Header />
-      <main>{children}</main>
+      <Header
+        isBurgerActive={isBurgerActive}
+        setBurger={setBurger}
+        isToggleMenuActive={isToggleMenuActive}
+        setToggleMenu={setToggleMenu}
+      />
+      <ToggleMenu isToggleMenuActive={isToggleMenuActive} />
+      <main style={font.style}>{children}</main>
       <Footer />
     </Meta>
   );

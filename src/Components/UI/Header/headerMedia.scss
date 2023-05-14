@@ -1,0 +1,21 @@
+@media screen and (max-width: 845px) {
+    .header {
+        .header_inner {
+            grid-template-columns: auto;
+            justify-content: center;
+            .logo {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 620px) {
+    .header {
+        .header_inner {
+            justify-content: end;
+            nav {
+                display: none;
+            }
+        }
+    }
+}

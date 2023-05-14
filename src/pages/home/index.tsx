@@ -1,11 +1,15 @@
 import Layout from "@/Components/Layout";
+import { FC } from "react";
+import Hero from "./Components/Hero/hero";
 
-export default function HomePage() {
+const HomePage: FC = () => {
   return (
     <>
       <Layout title="Prime">
-        <h1>home</h1>
+        <Hero />
       </Layout>
     </>
   );
-}
+};
+
+export default HomePage;

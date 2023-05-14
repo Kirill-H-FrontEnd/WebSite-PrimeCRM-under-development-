@@ -1,0 +1,8 @@
+#burger {
+    display: none;
+}
+@media screen and (max-width: 620px) {
+    #burger {
+        display: block;
+    }
+}

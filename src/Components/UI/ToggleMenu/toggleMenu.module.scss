@@ -5,25 +5,106 @@
     left: 0;
     width: 300px;
     height: 100vh;
-    background-color: $primary_3;
-    padding: 20px 0px 0px 20px;
+    background-color: #fff;
+    // padding: 20px 0px 0px 20px;
     transform: translate(-300px, 0px);
     transition: all 0.2s ease;
+    box-shadow: 0px 0px 8px rgba($color: $primary_3, $alpha: 0.4);
     &.active {
         transform: translate(0px, 0px);
+        .logo {
+            img {
+                animation: logo 0.6s ease forwards;
+            }
+            span {
+                animation: logo 0.6s ease forwards;
+            }
+        }
+        nav {
+            a {
+                animation: link 0.4s ease forwards;
+                &:nth-of-type(1) {
+                    animation-delay: 0.1s;
+                }
+                &:nth-of-type(2) {
+                    animation-delay: 0.2s;
+                }
+                &:nth-of-type(3) {
+                    animation-delay: 0.3s;
+                }
+                &:nth-of-type(4) {
+                    animation-delay: 0.4s;
+                }
+                &:nth-of-type(5) {
+                    animation-delay: 0.5s;
+                }
+                &:nth-of-type(6) {
+                    animation-delay: 0.6s;
+                }
+            }
+        }
     }
     .logo {
+        padding: 20px 0px 20px 20px;
         display: grid;
         grid-template-columns: auto auto;
         transition: all 0.2s ease;
         grid-column-gap: 5px;
         justify-content: start;
+        border-bottom: 2px solid $primary_3;
         &:hover {
             opacity: 0.9;
         }
-        span {
-            font-size: 22px;
-            color: #fff;
+
+        img {
+            opacity: 0;
         }
+        span {
+            opacity: 0;
+            font-size: 22px;
+            color: $primary_3;
+        }
+    }
+    nav {
+        display: grid;
+        a {
+            opacity: 0;
+            transform: translate(0px, 20px);
+            padding: 20px 0px 20px 20px;
+            font-size: $fz_text;
+            color: $primary_3;
+            border-bottom: 2px solid rgba($color: $primary_3, $alpha: 0.1);
+            text-transform: uppercase;
+            &:hover,
+            &:active {
+                background-color: $primary_1;
+                svg {
+                    color: #fff;
+                }
+            }
+            svg {
+                margin-right: 10px;
+                color: #4be3eb;
+            }
+        }
+    }
+}
+// ! KeyFrames
+@keyframes logo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes link {
+    from {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
 }

@@ -3,7 +3,7 @@ import s from "./header.module.scss";
 // Router
 import Link from "next/link";
 // Components
-import { FC, SetStateAction } from "react";
+import { FC, SetStateAction, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Jost } from "next/font/google";
 import { useRouter } from "next/router";
@@ -39,8 +39,22 @@ const Header: FC<IHeader> = ({
     { value: "Pricing", href: "/pricing" },
     { value: "Login", href: "/login" },
   ];
+  const [isFixed, setFixed] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      setFixed(scrollTop > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={s.header}>
+    <header className={`${s.header} ${isFixed ? s.fixed : ""}`}>
       <div className="container">
         <section className={s.header_inner}>
           <Link href="/" className={s.logo} style={font_logo.style}>

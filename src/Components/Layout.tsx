@@ -17,6 +17,7 @@ interface Props {}
 const Layout: FC<PropsWithChildren<IMeta>> = ({ children, title }) => {
   const [isBurgerActive, setBurger] = useState(false);
   const [isToggleMenuActive, setToggleMenu] = useState(false);
+
   return (
     <Meta title={title}>
       <Header

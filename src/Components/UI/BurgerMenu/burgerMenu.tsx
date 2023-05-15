@@ -1,4 +1,4 @@
-import { FC, SetStateAction } from "react";
+import { FC, SetStateAction, useEffect } from "react";
 // Styles
 import s from "./burger.module.scss";
 interface IBurger {
@@ -14,6 +14,13 @@ const BurgerMenu: FC<IBurger> = ({
   setToggleMenu,
   isToggleMenuActive,
 }) => {
+  useEffect(() => {
+    if (isBurgerActive) {
+      document.body.classList.add("hidden");
+    } else {
+      document.body.classList.remove("hidden");
+    }
+  }, [isBurgerActive]);
   return (
     <button
       id={s.burger}

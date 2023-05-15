@@ -9,6 +9,9 @@ html {
         outline: unset;
     }
     body {
+        &.hidden {
+            overflow-y: hidden;
+        }
         .container {
             width: min(100% - 20px, 1240px);
             margin-inline: auto;

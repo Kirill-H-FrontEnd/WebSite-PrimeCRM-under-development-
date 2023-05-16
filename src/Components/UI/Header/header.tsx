@@ -37,7 +37,7 @@ const Header: FC<IHeader> = ({
     { value: "Products", href: "/products" },
     { value: "Resources", href: "/resources" },
     { value: "Pricing", href: "/pricing" },
-    { value: "Login", href: "/login" },
+    { value: "Log in", href: "/signIn" },
   ];
   const [isFixed, setFixed] = useState(false);
   useEffect(() => {

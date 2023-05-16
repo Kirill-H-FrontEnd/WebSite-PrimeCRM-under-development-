@@ -1,0 +1,110 @@
+@import "../../styles/vars.scss";
+.signUp_wrapper {
+    width: 100%;
+    height: 100vh;
+    background: url(../../../public/SignIn/Bg.jpg) center no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    .signUp_header {
+        padding: 10px 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        .header_inner {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: space-between;
+            align-items: center;
+            .logo {
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: start;
+                transition: all 0.2s ease;
+                grid-column-gap: 5px;
+                &:hover {
+                    opacity: 0.9;
+                }
+                span {
+                    font-size: 25px;
+                    color: $primary_3;
+                }
+            }
+        }
+    }
+    .signUp_inner {
+        form {
+            display: grid;
+            grid-row-gap: 30px;
+            max-width: 600px;
+            .form_header {
+                color: #303030;
+                h2 {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                }
+                h1 {
+                    font-size: 50px;
+                    span {
+                        color: #49deff;
+                    }
+                }
+                p {
+                    a {
+                        color: #49deff;
+                    }
+                }
+            }
+            .form_outputs {
+                display: grid;
+                grid-row-gap: 10px;
+                input {
+                    border: 2px solid #303030;
+                    padding: 10px 0px 10px 10px;
+                    border-radius: 4px;
+                    transition: all 0.1s ease;
+                    cursor: pointer;
+                    &:focus {
+                        cursor: auto;
+                        border-color: #49deff;
+                        box-shadow: 6px 6px 1px rgba($color: #303030, $alpha: 1);
+                        transform: translate(-6px, -6px);
+                        &::placeholder {
+                            transform: translate(10px, 0px);
+                            opacity: 0;
+                        }
+                    }
+                    &::placeholder {
+                        transition: all 0.1s ease;
+                        color: #303030;
+                    }
+                }
+                div {
+                    display: grid;
+                    grid-template-columns: repeat(2, auto);
+                    grid-column-gap: 10px;
+                }
+            }
+            nav {
+                display: grid;
+                button {
+                    border: 2px solid #303030;
+                    padding: 10px 0px;
+                    text-transform: uppercase;
+                    background-color: #49deff;
+                    color: #303030;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: all 0.1s ease;
+                    &:hover {
+                        background-color: #303030;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+// ! Media
+@import "signUpMedia.scss";

@@ -30,7 +30,7 @@ const ToggleMenu: FC<IToggleMenu> = ({ isToggleMenuActive }) => {
     { value: "Products", href: "/products", icon: faChessBishop },
     { value: "Resources", href: "/resources", icon: faBookmark },
     { value: "Pricing", href: "/pricing", icon: faMoneyBill1 },
-    { value: "Login", href: "/login", icon: faUser },
+    { value: "Login", href: "/signIn", icon: faUser },
   ];
   return (
     <section

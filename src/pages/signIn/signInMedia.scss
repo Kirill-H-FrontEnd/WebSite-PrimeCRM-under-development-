@@ -1,0 +1,46 @@
+@media screen and (max-width: 1024px) {
+    .signIn_wrapper {
+        justify-content: center;
+        grid-template-columns: 600px;
+        .signIn_inner {
+            form {
+                max-width: 100%;
+                text-align: center;
+                .form_header {
+                    p {
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 630px) {
+    .signIn_wrapper {
+        grid-template-columns: 1fr;
+        .signIn_inner {
+            form {
+                .form_header {
+                    h1 {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .signIn_wrapper {
+        .signIn_inner {
+            form {
+                .form_header {
+                    h1 {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

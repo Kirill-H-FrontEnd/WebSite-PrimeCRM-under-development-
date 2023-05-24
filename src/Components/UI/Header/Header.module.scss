@@ -1,14 +1,15 @@
-@import "../../../styles/vars.scss";
+@import "../../../assets/styles/vars.scss";
 .header {
     width: 100%;
     padding: 10px 0px;
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: -60px;
     left: 0;
     box-shadow: 0px 0px 8px rgba($color: $primary_3, $alpha: 0.2);
     transition: all 0.2s ease;
+    animation: header 0.5s ease forwards;
+    z-index: 1000;
     &.fixed {
-        position: fixed;
         background-color: rgba($color: #fff, $alpha: 0.6);
         backdrop-filter: blur(8px);
     }
@@ -28,6 +29,7 @@
             span {
                 font-size: 25px;
                 color: $primary_3;
+                font-weight: 700;
             }
         }
         nav {
@@ -39,6 +41,7 @@
                 color: $primary_3;
                 font-size: $fz_text;
                 transition: all 0.2s ease;
+                font-weight: 500;
                 // &.active {
                 // }
                 &:hover {
@@ -62,3 +65,14 @@
 }
 // ! Media
 @import "headerMedia.scss";
+// ! KeyFrames
+@keyframes header {
+    from {
+        opacity: 0;
+        top: -60px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}

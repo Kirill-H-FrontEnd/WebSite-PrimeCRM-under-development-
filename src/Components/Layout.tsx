@@ -26,7 +26,11 @@ const Layout: FC<PropsWithChildren<IMeta>> = ({ children, title }) => {
         isToggleMenuActive={isToggleMenuActive}
         setToggleMenu={setToggleMenu}
       />
-      <ToggleMenu isToggleMenuActive={isToggleMenuActive} />
+      <ToggleMenu
+        isToggleMenuActive={isToggleMenuActive}
+        setToggleMenu={setToggleMenu}
+        setBurger={setBurger}
+      />
       <main style={font.style}>{children}</main>
       <Footer />
     </Meta>

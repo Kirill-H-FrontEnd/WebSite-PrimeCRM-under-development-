@@ -1,0 +1,34 @@
+@media screen and (max-width: 1024px) {
+    .footer {
+        .footer_inner {
+            .footer_content {
+                .footer_bar {
+                    grid-column-gap: 0px;
+                }
+                .footer_info {
+                    grid-column-gap: 0px;
+                    .footer_nav {
+                        grid-column-gap: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 870px) {
+    .footer {
+        .footer_inner {
+            .footer_header {
+                nav {
+                    display: none;
+                }
+            }
+            .footer_content {
+                display: none;
+            }
+            .footerWrapper_accordion {
+                display: block;
+            }
+        }
+    }
+}

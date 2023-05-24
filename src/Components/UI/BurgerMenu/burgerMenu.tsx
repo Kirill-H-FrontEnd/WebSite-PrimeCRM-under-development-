@@ -1,3 +1,4 @@
+// React
 import { FC, SetStateAction, useEffect } from "react";
 // Styles
 import s from "./burger.module.scss";

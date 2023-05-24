@@ -1,90 +1,230 @@
-@import "../../../styles/vars.scss";
+@import "../../../assets/styles/vars.scss";
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 .toggleMenu_wrapper {
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 100%;
     height: 100vh;
-    background-color: #fff;
-    // padding: 20px 0px 0px 20px;
-    transform: translate(-300px, 0px);
     transition: all 0.2s ease;
-    box-shadow: 0px 0px 8px rgba($color: $primary_3, $alpha: 0.4);
+    background-color: rgba($color: $secondary_1, $alpha: 0.3);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    z-index: 900;
+    visibility: hidden;
     &.active {
-        transform: translate(0px, 0px);
+        opacity: 1;
+        visibility: visible;
+        .toggle_navBar {
+            transform: translate(0px, 0px);
+            .logo {
+                img {
+                    animation: logo 0.6s ease forwards;
+                }
+                span {
+                    animation: logo 0.6s ease forwards;
+                }
+            }
+            nav {
+                a {
+                    animation: link 0.4s ease forwards;
+                    &:nth-of-type(1) {
+                        animation-delay: 0.1s;
+                    }
+                    &:nth-of-type(2) {
+                        animation-delay: 0.2s;
+                    }
+                    &:nth-of-type(3) {
+                        animation-delay: 0.3s;
+                    }
+                    &:nth-of-type(4) {
+                        animation-delay: 0.4s;
+                    }
+                    &:nth-of-type(5) {
+                        animation-delay: 0.5s;
+                    }
+                    &:nth-of-type(6) {
+                        animation-delay: 0.6s;
+                    }
+                }
+            }
+            .toggle_social {
+                animation: link 0.4s ease forwards 0.7s;
+            }
+        }
+    }
+    .toggle_navBar {
+        transition: all 0.2s ease;
+        height: 100%;
+        background-color: #fff;
+        transform: translate(-300px, 0px);
+        width: 300px;
+        overflow: scroll;
+        box-shadow: 0px 0px 8px rgba($color: $primary_3, $alpha: 0.3);
+        z-index: 1000;
         .logo {
+            padding: 20px 0px 20px 20px;
+            display: grid;
+            grid-template-columns: auto auto;
+            transition: all 0.2s ease;
+            grid-column-gap: 5px;
+            justify-content: start;
+            border-bottom: 2px solid $primary_3;
+            &:hover {
+                opacity: 0.9;
+            }
+
             img {
-                animation: logo 0.6s ease forwards;
+                opacity: 0;
             }
             span {
-                animation: logo 0.6s ease forwards;
+                opacity: 0;
+                font-size: 22px;
+                color: $primary_3;
+                font-weight: 700;
             }
         }
         nav {
+            display: grid;
             a {
-                animation: link 0.4s ease forwards;
-                &:nth-of-type(1) {
-                    animation-delay: 0.1s;
+                opacity: 0;
+                transform: translate(0px, 20px);
+                padding: 20px 0px 20px 20px;
+                font-size: $fz_text;
+                color: $primary_3;
+                border-bottom: 2px solid rgba($color: $primary_3, $alpha: 0.1);
+                text-transform: uppercase;
+                font-weight: 400;
+                &:hover,
+                &:active {
+                    background-color: $primary_1;
+                    svg {
+                        color: #fff;
+                    }
                 }
-                &:nth-of-type(2) {
-                    animation-delay: 0.2s;
-                }
-                &:nth-of-type(3) {
-                    animation-delay: 0.3s;
-                }
-                &:nth-of-type(4) {
-                    animation-delay: 0.4s;
-                }
-                &:nth-of-type(5) {
-                    animation-delay: 0.5s;
-                }
-                &:nth-of-type(6) {
-                    animation-delay: 0.6s;
+                svg {
+                    margin-right: 10px;
+                    color: #4be3eb;
                 }
             }
         }
-    }
-    .logo {
-        padding: 20px 0px 20px 20px;
-        display: grid;
-        grid-template-columns: auto auto;
-        transition: all 0.2s ease;
-        grid-column-gap: 5px;
-        justify-content: start;
-        border-bottom: 2px solid $primary_3;
-        &:hover {
-            opacity: 0.9;
-        }
-
-        img {
-            opacity: 0;
-        }
-        span {
-            opacity: 0;
-            font-size: 22px;
-            color: $primary_3;
-        }
-    }
-    nav {
-        display: grid;
-        a {
+        .toggle_social {
             opacity: 0;
             transform: translate(0px, 20px);
-            padding: 20px 0px 20px 20px;
-            font-size: $fz_text;
-            color: $primary_3;
-            border-bottom: 2px solid rgba($color: $primary_3, $alpha: 0.1);
-            text-transform: uppercase;
-            &:hover,
-            &:active {
-                background-color: $primary_1;
-                svg {
-                    color: #fff;
+            .szhAccordion {
+                .accordion {
+                    h3 {
+                        border-bottom: 2px solid rgba($color: $primary_3, $alpha: 0.1);
+                        width: 100%;
+                        padding: 20px 0px 20px 20px;
+                        transition: all 0.2s ease;
+                        .accordionBtn {
+                            font-family: "Jost", sans-serif;
+                            color: $primary_3;
+                            font-weight: 400;
+                            font-size: 18px;
+                            width: 100%;
+                            text-align: left;
+                            border: none;
+                            background: transparent;
+                            position: relative;
+                            display: grid;
+                            grid-template-columns: repeat(2, auto);
+                            justify-content: start;
+                            align-items: center;
+                            text-transform: uppercase;
+                            svg {
+                                transition: all 0.2s ease;
+                                &:nth-of-type(1) {
+                                    margin-right: 10px;
+                                    color: #4be3eb;
+                                }
+                                &:nth-of-type(2) {
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 20px;
+                                    transform: translate(0%, -50%) rotate(-90deg);
+                                    font-size: 14px;
+                                    transition: all 0.2s ease;
+                                }
+                            }
+                        }
+                    }
+                    .accordionContent {
+                        transition: height 0.2s ease-in-out;
+                        .accordionPanel {
+                            display: grid;
+
+                            a {
+                                font-size: 16px;
+                                color: $primary_3;
+                                padding: 10px 0px 10px 20px;
+                                transition: all 0.2s ease;
+                                opacity: 0;
+                                transform: translate(0px, 0px);
+                                animation: link 0.4s ease forwards;
+                                &:nth-of-type(1) {
+                                    animation-delay: 0.1s;
+                                    svg {
+                                        color: #cd4471;
+                                    }
+                                }
+                                &:nth-of-type(2) {
+                                    animation-delay: 0.2s;
+
+                                    svg {
+                                        color: #4064ac;
+                                    }
+                                }
+                                &:nth-of-type(3) {
+                                    animation-delay: 0.3s;
+
+                                    svg {
+                                        color: #1c9ae7;
+                                    }
+                                }
+                                &:nth-of-type(4) {
+                                    animation-delay: 0.4s;
+
+                                    svg {
+                                        color: #f73163;
+                                    }
+                                }
+                                &:nth-of-type(5) {
+                                    animation-delay: 0.5s;
+
+                                    svg {
+                                        color: #ff0000;
+                                    }
+                                }
+                                svg {
+                                    margin-right: 10px;
+                                }
+                                &.active {
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
                 }
-            }
-            svg {
-                margin-right: 10px;
-                color: #4be3eb;
+                .accordion {
+                    .accordionHeaderExpanded {
+                        background-color: $primary_1;
+                        .accordionBtnExpanded {
+                            color: #fff;
+
+                            svg {
+                                &:nth-of-type(1) {
+                                    color: #fff;
+                                }
+                                &:nth-of-type(2) {
+                                    color: #fff;
+                                    transform: translate(0%, -50%) rotate(0deg);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -1,22 +1,20 @@
 // Styles
 import s from "./header.module.scss";
-// Router
+// Next
 import Link from "next/link";
-// Components
-import { FC, SetStateAction, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Jost } from "next/font/google";
 import { useRouter } from "next/router";
+// Components
 import BurgerMenu from "../BurgerMenu/burgerMenu";
+// React
+import { FC, SetStateAction, useEffect, useRef, useState } from "react";
+// Font
+import { Jost } from "next/font/google";
+const font = Jost({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+});
 
-const font_link = Jost({
-  subsets: ["latin"],
-  weight: ["500"],
-});
-const font_logo = Jost({
-  subsets: ["latin"],
-  weight: ["700"],
-});
 interface IHeader {
   isBurgerActive: boolean;
   isToggleMenuActive: boolean;
@@ -31,6 +29,7 @@ const Header: FC<IHeader> = ({
   isToggleMenuActive,
 }) => {
   const { asPath } = useRouter();
+  const [isFixed, setFixed] = useState(false);
   let navLinksData = [
     { value: "Solution", href: "/" },
     { value: "Industries", href: "/industries" },
@@ -39,7 +38,6 @@ const Header: FC<IHeader> = ({
     { value: "Pricing", href: "/pricing" },
     { value: "Log in", href: "/signIn" },
   ];
-  const [isFixed, setFixed] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop =
@@ -57,7 +55,7 @@ const Header: FC<IHeader> = ({
     <header className={`${s.header} ${isFixed ? s.fixed : ""}`}>
       <div className="container">
         <section className={s.header_inner}>
-          <Link href="/" className={s.logo} style={font_logo.style}>
+          <Link href="/" className={s.logo} style={font.style}>
             <Image src={"/Logo.svg"} alt="logo" width={35} height={35} />
             <span>PrimeCRM</span>
           </Link>
@@ -66,7 +64,7 @@ const Header: FC<IHeader> = ({
               <Link
                 className={asPath === link.href ? s.active : ""}
                 href={link.href}
-                style={font_link.style}
+                style={font.style}
                 key={i}
               >
                 {link.value}

@@ -1,0 +1,243 @@
+@import "../../../assets/styles/vars.scss";
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
+.footer {
+    background-color: $primary_3;
+    padding: 50px 0px 0px 0px;
+    .footer_inner {
+        .footer_header {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            .logo {
+                display: grid;
+                grid-template-columns: auto auto;
+                transition: all 0.2s ease;
+                grid-column-gap: 5px;
+                &:hover {
+                    opacity: 0.9;
+                }
+                span {
+                    font-size: 25px;
+                    color: #fff;
+                    font-weight: 700;
+                }
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(5, auto);
+                grid-column-gap: 20px;
+                a {
+                    font-size: 24px;
+                    color: #fff;
+                    transition: all 0.1s ease;
+                    &:hover {
+                        transform: scale(1.1, 1.1);
+                        &:nth-of-type(1) {
+                            color: #cd4471;
+                        }
+                        &:nth-of-type(2) {
+                            color: #4064ac;
+                        }
+                        &:nth-of-type(3) {
+                            color: #1c9ae7;
+                        }
+                        &:nth-of-type(4) {
+                            color: #f73163;
+                        }
+                        &:nth-of-type(5) {
+                            color: #ff0000;
+                        }
+                    }
+                }
+            }
+        }
+        .footer_content {
+            .footer_bar {
+                display: grid;
+                grid-template-columns: repeat(4, 200px);
+                justify-content: start;
+                grid-column-gap: 30px;
+                padding: 20px 0px;
+                border-top: 2px solid #4a4a4a;
+                border-bottom: 2px solid #4a4a4a;
+                position: relative;
+                h5 {
+                    font-size: $fz_title_3;
+                    color: #fff;
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                }
+                .btn_top {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(-50%, -50%);
+                    background: transparent;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid #4a4a4a;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    svg {
+                        color: #fff;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 18px;
+                    }
+                    &:hover {
+                        border-color: #fff;
+                    }
+                }
+            }
+            .footer_info {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-column-gap: 30px;
+                padding: 30px 0px;
+                .footer_nav {
+                    display: grid;
+                    grid-template-columns: repeat(3, 200px);
+                    justify-content: start;
+                    grid-column-gap: 30px;
+                    nav {
+                        display: grid;
+                        grid-row-gap: 15px;
+                        font-size: $fz_text;
+                        a {
+                            color: #fff;
+                            font-weight: 500;
+                            transition: all 0.2s ease;
+                            &.active {
+                                color: $primary_1;
+                            }
+                            &:hover {
+                                transform: translate(4px, 0px);
+                                color: $primary_1;
+                            }
+                        }
+                    }
+                    .footer_contacts {
+                        display: grid;
+                        div {
+                            line-height: 2;
+                            p {
+                                color: #fff;
+                            }
+                            a {
+                                color: #fff;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .footer_news {
+                    width: 100%;
+                    background: url("./Images/ImageFooter.jpg") no-repeat center;
+                    background-size: cover;
+                    border-radius: 20px;
+                    position: relative;
+
+                    a {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-weight: 600;
+                        color: $primary_3;
+                        background-color: rgba($color: #fff, $alpha: 0.7);
+                        padding: 10px 20px;
+                        border-radius: 4px;
+                        transition: all 0.2s ease;
+                        &:hover {
+                            background-color: rgba($color: #fff, $alpha: 1);
+                        }
+                    }
+                }
+            }
+        }
+        // Accordion
+        .footerWrapper_accordion {
+            display: none;
+            .szhAccordion {
+                .accordion {
+                    h3 {
+                        border-bottom: 2px solid #c9dcec;
+                        width: 100%;
+                        padding: 5px 0px 5px 0px;
+                        .accordionBtn {
+                            font-family: "Jost", sans-serif;
+                            font-weight: 500;
+                            color: #fff;
+                            padding: 10px 0px 10px 0px;
+                            font-size: 18px;
+                            width: 100%;
+                            text-align: left;
+                            border: none;
+                            background: transparent;
+                            position: relative;
+                            svg {
+                                position: absolute;
+                                top: 50%;
+                                right: 20px;
+                                transform: translate(0%, -50%) rotate(-90deg);
+                                font-size: 14px;
+                                transition: all 0.2s ease;
+                            }
+                        }
+                    }
+                    .accordionContent {
+                        transition: height 0.2s ease-in-out;
+                        border-bottom: 2px solid #fff;
+                        .accordionPanel {
+                            display: grid;
+
+                            a {
+                                font-size: 16px;
+                                color: #fff;
+                                font-weight: 400;
+                                padding: 10px 0px;
+                                transition: all 0.2s ease;
+                                &.active {
+                                    color: red;
+                                }
+                            }
+                            section {
+                                padding: 10px 0px;
+                                color: #fff;
+                                display: grid;
+                                grid-row-gap: 10px;
+                            }
+                        }
+                    }
+                }
+                .accordion {
+                    h3 {
+                        .accordionBtnExpanded {
+                            svg {
+                                transform: translate(0%, -50%) rotate(0deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer_copyright {
+            border-top: 2px solid #4a4a4a;
+            text-align: center;
+            padding: 20px 0px;
+            span {
+                font-weight: 400;
+                color: #fff;
+                font-size: 14px;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+// ! Media
+@import "footerMedia.scss";

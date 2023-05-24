@@ -1,4 +1,4 @@
-@import "../../styles/vars.scss";
+@import "../../assets/styles/global.scss";
 .signIn_wrapper {
     width: 100%;
     height: 100vh;
@@ -14,8 +14,8 @@
         width: 100%;
         .header_inner {
             display: grid;
-            grid-template-columns: repeat(2, auto);
-            justify-content: space-between;
+            grid-template-columns: auto;
+            justify-content: start;
             align-items: center;
             .logo {
                 display: grid;
@@ -31,9 +31,29 @@
                     color: $primary_3;
                 }
             }
+            nav {
+                a {
+                    color: $primary_3;
+                    font-size: $fz_text;
+                    transition: all 0.2s ease;
+                    border: 2px solid #fff;
+                    background-color: $primary_1;
+                    color: #fff;
+                    padding: 6px 30px;
+                    border-radius: 4px;
+                    &:hover {
+                        transform: translate(0px, 0px);
+                        background-color: #fff;
+                        color: $primary_3;
+                    }
+                }
+            }
         }
     }
     .signIn_inner {
+        opacity: 0;
+        transform: translate(0px, 20px);
+        animation: form 0.5s ease forwards 0.1s;
         form {
             display: grid;
             grid-row-gap: 30px;
@@ -108,3 +128,14 @@
 }
 // ! Media
 @import "signInMedia.scss";
+// ! KeyFrames
+@keyframes form {
+    from {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}

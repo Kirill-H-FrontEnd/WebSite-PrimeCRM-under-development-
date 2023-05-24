@@ -1,5 +1,6 @@
 @import "../Libs/hamburgers-master/_sass/hamburgers/hamburgers.scss";
 @import "./vars.scss";
+
 html {
     * {
         margin: 0;
@@ -9,6 +10,8 @@ html {
         outline: unset;
     }
     body {
+        padding: 0;
+        margin: 0;
         &.hidden {
             overflow-y: hidden;
         }

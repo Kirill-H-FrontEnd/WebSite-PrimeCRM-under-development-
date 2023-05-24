@@ -1,10 +1,12 @@
-import { FC } from "react";
 import { Jost, Open_Sans } from "next/font/google";
 // Styles
 import s from "./signIn.module.scss";
+
+// Next
 import Image from "next/image";
 import Link from "next/link";
 import Meta from "@/Components/Seo/Meta";
+import { FC } from "react";
 
 interface ISignIn {}
 
@@ -13,14 +15,11 @@ const font_logo = Jost({
   weight: ["700"],
 });
 
-const font_text_700 = Open_Sans({
+const font_text = Open_Sans({
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["500", "600", "700"],
 });
-const font_text_500 = Open_Sans({
-  subsets: ["latin"],
-  weight: ["500"],
-});
+
 const SignIn: FC = ({}) => {
   return (
     <>
@@ -41,35 +40,35 @@ const SignIn: FC = ({}) => {
               {" "}
               <form>
                 <div className={s.form_header}>
-                  <h2 style={font_text_700.style}>Welcome back</h2>
-                  <h1 style={font_text_700.style}>
+                  <h2 style={font_text.style}>Welcome back</h2>
+                  <h1 style={font_text.style}>
                     Enter your details<span>.</span>
                   </h1>
-                  <p style={font_text_500.style}>
+                  <p style={font_text.style}>
                     Don't have an account?<Link href={"/signUp"}> Sign Up</Link>
                   </p>
                 </div>
                 <div className={s.form_outputs}>
                   <div>
                     <input
-                      style={font_text_500.style}
+                      style={font_text.style}
                       placeholder="Name"
                       type="text"
                     />
                     <input
-                      style={font_text_500.style}
+                      style={font_text.style}
                       placeholder="Email"
                       type="email"
                     />
                   </div>
                   <input
-                    style={font_text_500.style}
+                    style={font_text.style}
                     placeholder="Password"
                     type="password"
                   />
                 </div>
                 <nav>
-                  <button style={font_text_700.style}>Log in</button>
+                  <button style={font_text.style}>Log in</button>
                 </nav>
               </form>
             </div>

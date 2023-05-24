@@ -12,14 +12,11 @@ const font_logo = Jost({
   subsets: ["latin"],
   weight: ["700"],
 });
-const font_text_700 = Open_Sans({
+const font_text = Open_Sans({
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["500", "600", "700"],
 });
-const font_text_500 = Open_Sans({
-  subsets: ["latin"],
-  weight: ["500"],
-});
+
 const SignIn: FC = ({}) => {
   return (
     <>
@@ -41,40 +38,40 @@ const SignIn: FC = ({}) => {
               {" "}
               <form>
                 <div className={s.form_header}>
-                  <h2 style={font_text_700.style}>Start for free</h2>
-                  <h1 style={font_text_700.style}>
+                  <h2 style={font_text.style}>Start for free</h2>
+                  <h1 style={font_text.style}>
                     Create new account<span>.</span>
                   </h1>
-                  <p style={font_text_500.style}>
+                  <p style={font_text.style}>
                     You have an account?<Link href={"/signIn"}> Log in</Link>
                   </p>
                 </div>
                 <div className={s.form_outputs}>
                   <div>
                     <input
-                      style={font_text_500.style}
+                      style={font_text.style}
                       placeholder="Name"
                       type="text"
                     />
                     <input
-                      style={font_text_500.style}
+                      style={font_text.style}
                       placeholder="Last name"
                       type="text"
                     />
                   </div>
                   <input
-                    style={font_text_500.style}
+                    style={font_text.style}
                     placeholder="Email"
                     type="email"
                   />
                   <input
-                    style={font_text_500.style}
+                    style={font_text.style}
                     placeholder="Password"
                     type="password"
                   />
                 </div>
                 <nav>
-                  <button style={font_text_700.style}>Create account</button>
+                  <button style={font_text.style}>Create account</button>
                 </nav>
               </form>
             </div>

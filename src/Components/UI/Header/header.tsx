@@ -31,8 +31,8 @@ const Header: FC<IHeader> = ({
   const { asPath } = useRouter();
   const [isFixed, setFixed] = useState(false);
   let navLinksData = [
-    { value: "Solution", href: "/" },
-    { value: "Industries", href: "/industries" },
+    { value: "Solution", href: "/solution" },
+    { value: "Blog", href: "/blog" },
     { value: "Products", href: "/products" },
     { value: "Resources", href: "/resources" },
     { value: "Pricing", href: "/pricing" },
@@ -52,7 +52,11 @@ const Header: FC<IHeader> = ({
   }, []);
 
   return (
-    <header className={`${s.header} ${isFixed ? s.fixed : ""}`}>
+    <header
+      className={`${s.header} ${isFixed ? s.fixed : ""} ${
+        asPath !== "/" && s.hideShadow
+      }`}
+    >
       <div className="container">
         <section className={s.header_inner}>
           <Link href="/" className={s.logo} style={font.style}>

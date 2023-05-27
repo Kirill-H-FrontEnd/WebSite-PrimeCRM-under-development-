@@ -8,19 +8,19 @@ import Link from "next/link";
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCalendar,
-  faThumbsUp,
   faChessBishop,
   faBookmark,
   faMoneyBill1,
   faUser,
 } from "@fortawesome/free-regular-svg-icons";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faInstagram,
   faInvision,
   faTwitter,
   faYoutube,
+  faBlogger,
 } from "@fortawesome/free-brands-svg-icons";
 // Accordion
 import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
@@ -49,6 +49,7 @@ const AccordionItem = ({ ...rest }) => (
 );
 // Font
 import { Jost } from "next/font/google";
+import { useRouter } from "next/router";
 const font = Jost({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -64,9 +65,10 @@ const ToggleMenu: FC<IToggleMenu> = ({
   setToggleMenu,
   setBurger,
 }) => {
+  const { asPath } = useRouter();
   let navDataLinks = [
-    { value: "Solution", href: "/solution", icon: faThumbsUp },
-    { value: "Industries", href: "/industries", icon: faCalendar },
+    { value: "Home", href: "/", icon: faHouse },
+    { value: "Blog", href: "/blog", icon: faBlogger },
     { value: "Products", href: "/products", icon: faChessBishop },
     { value: "Resources", href: "/resources", icon: faBookmark },
     { value: "Pricing", href: "/pricing", icon: faMoneyBill1 },
@@ -112,7 +114,12 @@ const ToggleMenu: FC<IToggleMenu> = ({
         </Link>
         <nav>
           {navDataLinks.map((link, i) => (
-            <Link href={link.href} style={font.style} key={i}>
+            <Link
+              className={asPath === link.href ? s.link_active : ""}
+              href={link.href}
+              style={font.style}
+              key={i}
+            >
               <FontAwesomeIcon icon={link.icon} />
               {link.value}
             </Link>

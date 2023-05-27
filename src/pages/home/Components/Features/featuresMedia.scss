@@ -1,0 +1,29 @@
+@media screen and (max-width: 1024px) {
+    .features {
+        padding: 0px 0px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .features {
+        .features_inner {
+            .features_header {
+                h2 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+            .features_cards {
+                .features_card {
+                    h3 {
+                        font-size: 20px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

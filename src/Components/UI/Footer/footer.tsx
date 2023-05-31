@@ -168,7 +168,7 @@ const Footer: FC = ({}) => {
                 header={
                   <>
                     Useful Links
-                    <FontAwesomeIcon icon={faChevronDown} />
+                    <FontAwesomeIcon icon={faChevronDown} width={15} />
                   </>
                 }
               >
@@ -186,7 +186,7 @@ const Footer: FC = ({}) => {
                 header={
                   <>
                     Service
-                    <FontAwesomeIcon icon={faChevronDown} />
+                    <FontAwesomeIcon icon={faChevronDown} width={15} />
                   </>
                 }
               >
@@ -204,7 +204,7 @@ const Footer: FC = ({}) => {
                 header={
                   <>
                     Contacts Us
-                    <FontAwesomeIcon icon={faChevronDown} />
+                    <FontAwesomeIcon icon={faChevronDown} width={15} />
                   </>
                 }
               >

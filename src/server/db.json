@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "6 Tips To Help You Build Your Social Media Effeciency & Better",
+      "description": "Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. ipsum dolor amet, consectetur adipiscing vestibulum ipsum primis in.",
+      "image": ""
+    },
+    {
+      "id": "2",
+      "title": "6 Tips To Help You Build Your Social Media Effeciency & Better",
+      "description": "Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. ipsum dolor amet, consectetur adipiscing vestibulum ipsum primis in.",
+      "image": ""
+    },
+    {
+      "id": "3",
+      "title": "6 Tips To Help You Build Your Social Media Effeciency & Better",
+      "description": "Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. ipsum dolor amet, consectetur adipiscing vestibulum ipsum primis in.",
+      "image": ""
+    }
+  ]
+}

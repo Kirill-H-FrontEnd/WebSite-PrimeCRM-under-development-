@@ -34,7 +34,7 @@ const Header: FC<IHeader> = ({
     { value: "Solution", href: "/solution" },
     { value: "Blog", href: "/blog" },
     { value: "Products", href: "/products" },
-    { value: "Resources", href: "/resources" },
+    { value: "Licenses", href: "/licenses" },
     { value: "Pricing", href: "/pricing" },
     { value: "Log in", href: "/signIn" },
   ];

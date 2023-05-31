@@ -95,6 +95,11 @@
                 border-bottom: 2px solid rgba($color: $primary_3, $alpha: 0.1);
                 text-transform: uppercase;
                 font-weight: 400;
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                justify-content: start;
+                align-items: center;
+                grid-column-gap: 10px;
                 &:hover,
                 &.link_active {
                     background-color: $primary_1;
@@ -104,7 +109,6 @@
                     }
                 }
                 svg {
-                    margin-right: 10px;
                     color: #4be3eb;
                 }
             }
@@ -164,6 +168,11 @@
                                 opacity: 0;
                                 transform: translate(0px, 0px);
                                 animation: link 0.4s ease forwards;
+                                display: grid;
+                                grid-template-columns: repeat(2, auto);
+                                justify-content: start;
+                                align-items: center;
+                                grid-column-gap: 10px;
                                 &:nth-of-type(1) {
                                     animation-delay: 0.1s;
                                     svg {
@@ -198,9 +207,7 @@
                                         color: #ff0000;
                                     }
                                 }
-                                svg {
-                                    margin-right: 10px;
-                                }
+
                                 &.active {
                                     color: red;
                                 }

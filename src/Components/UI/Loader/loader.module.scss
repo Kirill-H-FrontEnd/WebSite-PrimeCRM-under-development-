@@ -1,0 +1,32 @@
+@import "../../../assets/styles/vars.scss";
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .bar {
+        display: inline-block;
+        width: 3px;
+        height: 20px;
+        background-color: rgba($color: $primary_1, $alpha: 1);
+        border-radius: 10px;
+        animation: scale-up4 1s linear infinite;
+        &:nth-of-type(2) {
+            height: 35px;
+            margin: 0 5px;
+            animation-delay: 0.25s;
+        }
+        &:nth-of-type(3) {
+            animation-delay: 0.5s;
+        }
+    }
+}
+@keyframes scale-up4 {
+    20% {
+        background-color: $secondary_3;
+        transform: scaleY(1.5);
+    }
+
+    40% {
+        transform: scaleY(1);
+    }
+}

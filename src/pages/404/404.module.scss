@@ -1,0 +1,40 @@
+@import "../../assets/styles/vars.scss";
+.notFoundPage {
+    display: grid;
+    place-items: center;
+    padding: 100px 0px;
+    .notFoundPage_inner {
+        background-color: $primary_3;
+        border-radius: 30px;
+        text-align: center;
+        padding: 50px 0px;
+        color: #fff;
+        h2 {
+            font-weight: 800;
+            font-size: 200px;
+            height: 250px;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 50px;
+        }
+        p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: $fz_text;
+            margin-bottom: 40px;
+        }
+        a {
+            font-weight: 600;
+            background-color: $primary_1;
+            color: $primary_3;
+            padding: 10px 30px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            &:hover {
+                background-color: #fff;
+                color: $primary_1;
+            }
+        }
+    }
+}

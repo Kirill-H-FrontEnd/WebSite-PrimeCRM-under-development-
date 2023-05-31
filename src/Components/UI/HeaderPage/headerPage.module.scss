@@ -10,5 +10,8 @@
     .description {
         font-size: $fz_text;
         color: $secondary_1;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.5;
     }
 }

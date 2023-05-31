@@ -1,0 +1,13 @@
+@import "../../../assets/styles/vars.scss";
+.error {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    grid-column-gap: 10px;
+    color: $error;
+
+    p {
+        font-weight: 500;
+    }
+}

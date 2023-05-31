@@ -197,7 +197,6 @@
                             background: transparent;
                             position: relative;
                             transition: all 0.2s ease;
-
                             svg {
                                 position: absolute;
                                 top: 50%;
@@ -205,6 +204,7 @@
                                 transform: translate(0%, -50%) rotate(-90deg);
                                 font-size: 14px;
                                 transition: all 0.2s ease;
+                                // width: 15px;
                             }
                         }
                     }

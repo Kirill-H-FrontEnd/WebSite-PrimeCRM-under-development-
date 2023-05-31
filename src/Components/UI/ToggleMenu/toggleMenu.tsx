@@ -70,7 +70,7 @@ const ToggleMenu: FC<IToggleMenu> = ({
     { value: "Home", href: "/", icon: faHouse },
     { value: "Blog", href: "/blog", icon: faBlogger },
     { value: "Products", href: "/products", icon: faChessBishop },
-    { value: "Resources", href: "/resources", icon: faBookmark },
+    { value: "Licenses", href: "/licenses", icon: faBookmark },
     { value: "Pricing", href: "/pricing", icon: faMoneyBill1 },
     { value: "Login", href: "/signIn", icon: faUser },
   ];
@@ -120,7 +120,7 @@ const ToggleMenu: FC<IToggleMenu> = ({
               style={font.style}
               key={i}
             >
-              <FontAwesomeIcon icon={link.icon} />
+              <FontAwesomeIcon icon={link.icon} width={15} />
               {link.value}
             </Link>
           ))}
@@ -135,9 +135,9 @@ const ToggleMenu: FC<IToggleMenu> = ({
             <AccordionItem
               header={
                 <>
-                  <FontAwesomeIcon icon={faBookmark} />
+                  <FontAwesomeIcon icon={faBookmark} width={15} />
                   Social
-                  <FontAwesomeIcon icon={faChevronDown} />
+                  <FontAwesomeIcon icon={faChevronDown} width={15} />
                 </>
               }
             >
@@ -148,7 +148,7 @@ const ToggleMenu: FC<IToggleMenu> = ({
                   href={link.href}
                   target="_blank"
                 >
-                  <FontAwesomeIcon icon={link.icon} />
+                  <FontAwesomeIcon icon={link.icon} width={15} />
                   {link.title}
                 </Link>
               ))}

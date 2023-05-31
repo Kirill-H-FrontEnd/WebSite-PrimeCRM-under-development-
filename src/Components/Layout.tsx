@@ -7,10 +7,10 @@ import Footer from "./UI/Footer/footer";
 
 import { Open_Sans } from "next/font/google";
 import ToggleMenu from "./UI/ToggleMenu/toggleMenu";
-
+// Font
 const font = Open_Sans({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500"],
 });
 interface Props {}
 

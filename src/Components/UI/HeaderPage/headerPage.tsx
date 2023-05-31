@@ -15,10 +15,12 @@ interface IHeaderPage {
 const HeaderPage: FC<IHeaderPage> = ({ title, description }) => {
   return (
     <section className={s.header_page}>
-      <h2 style={font.style} className={s.title}>
-        {title}
-      </h2>
-      <p className={s.description}>{description}</p>
+      <div className="container">
+        <h2 style={font.style} className={s.title}>
+          {title}
+        </h2>
+        <p className={s.description}>{description}</p>
+      </div>
     </section>
   );
 };

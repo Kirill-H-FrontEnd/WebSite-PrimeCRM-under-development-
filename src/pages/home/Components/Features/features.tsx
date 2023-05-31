@@ -4,9 +4,9 @@ import s from "./features.module.scss";
 // React
 import { FC } from "react";
 // Images
-import icon1 from "./Images/icon1.svg";
-import icon2 from "./Images/icon2.svg";
-import icon3 from "./Images/icon3.svg";
+import icon1 from "@/assets/Images/HomePage/features/icon1.svg";
+import icon2 from "@/assets/Images/HomePage/features/icon2.svg";
+import icon3 from "@/assets/Images/HomePage/features/icon3.svg";
 // Font
 import { Jost } from "next/font/google";
 const font = Jost({

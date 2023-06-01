@@ -5,6 +5,7 @@ import s from "./toggleMenu.module.scss";
 // Next
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -49,7 +50,6 @@ const AccordionItem = ({ ...rest }) => (
 );
 // Font
 import { Jost } from "next/font/google";
-import { useRouter } from "next/router";
 const font = Jost({
   subsets: ["latin"],
   weight: ["400", "700"],

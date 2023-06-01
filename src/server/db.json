@@ -18,5 +18,22 @@
       "description": "Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. ipsum dolor amet, consectetur adipiscing vestibulum ipsum primis in.",
       "image": ""
     }
+  ],
+  "recentPosts": [
+    {
+      "id": "1",
+      "title": "Tax experts under income-tax lens for valuation",
+      "image": ""
+    },
+    {
+      "id": "2",
+      "title": "Entrepreneurs Having the Necessary Skill Sets",
+      "image": ""
+    },
+    {
+      "id": "3",
+      "title": "How to Choose A Tech Stack for Your Startup",
+      "image": ""
+    }
   ]
 }

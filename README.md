@@ -1,1 +1,1 @@
-# | REACT | TS | NEXT | SCSS Modules
+# | REACT | TS | NEXT | SCSS Modules | JSON Server 

@@ -1,0 +1,22 @@
+@media screen and (max-width: 1024px) {
+    .blog_content {
+        .blog_inner {
+            grid-template-columns: 1fr 330px;
+        }
+    }
+}
+@media screen and (max-width: 845px) {
+    .blog_content {
+        .blog_inner {
+            grid-template-columns: 1fr;
+            .blog_posts {
+                grid-row-start: 2;
+                nav {
+                    ul {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}

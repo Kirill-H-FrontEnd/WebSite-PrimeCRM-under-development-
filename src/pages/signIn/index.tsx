@@ -23,7 +23,7 @@ const font_text = Open_Sans({
 const SignIn: FC = ({}) => {
   return (
     <>
-      <Meta title="Sign In">
+      <Meta title=" Prime | Sign In">
         <section className={s.signIn_wrapper}>
           <header className={s.signIn_header}>
             <div className="container">

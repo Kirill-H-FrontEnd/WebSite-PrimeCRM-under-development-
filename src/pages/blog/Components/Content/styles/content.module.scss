@@ -1,0 +1,14 @@
+.blog_content {
+    margin-bottom: 100px;
+    .blog_inner {
+        display: grid;
+        grid-template-columns: 1fr 390px;
+        grid-column-gap: 50px;
+        .blog_posts {
+            display: grid;
+            grid-row-gap: 50px;
+        }
+    }
+}
+// ! Media
+@import "contentMedia.scss";

@@ -13,7 +13,7 @@ interface IBlog {}
 const Blog: FC = ({}) => {
   return (
     <>
-      <Layout title="Blog">
+      <Layout title="Prime | Blog">
         <HeaderPage
           title="Our Journal"
           description="Get the latest articles from our journal, writing, discuss and share"

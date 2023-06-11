@@ -1,0 +1,14 @@
+.singleBlog {
+    padding: 150px 0px;
+
+    .singleBlog_post {
+        display: grid;
+        grid-template-columns: 1fr;
+        article {
+            img {
+                width: 100%;
+                height: 0 auto;
+            }
+        }
+    }
+}

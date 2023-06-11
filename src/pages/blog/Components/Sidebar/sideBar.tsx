@@ -1,10 +1,12 @@
 // React
-import { FC } from "react";
+import { FC, SetStateAction } from "react";
 // Styles
-import s from "./sideBar.module.scss";
-// Font
-import { Jost } from "next/font/google";
+import s from "./styles/sideBar.module.scss";
+// Components
 import RecentPost from "./post";
+// FontAwesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // Accordion
 import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
 import Link from "next/link";
@@ -30,14 +32,19 @@ const AccordionItem = ({ ...rest }) => (
     }}
   />
 );
+// Font
+import { Jost } from "next/font/google";
 const font = Jost({
   subsets: ["latin"],
-  weight: ["500", "600"],
+  weight: ["400", "500", "600"],
 });
 
-interface ISideBar {}
+interface ISideBar {
+  search: string;
+  setSearch: React.Dispatch<SetStateAction<string>>;
+}
 
-const SideBar: FC = ({}) => {
+const SideBar: FC<ISideBar> = ({ setSearch, search }) => {
   const dataAccordionAll = [
     { title: "Solution", href: "" },
     { title: "Industries", href: "" },
@@ -56,8 +63,18 @@ const SideBar: FC = ({}) => {
     { title: "Automotive", href: "" },
   ];
   const dataAccordionMarketing = [{ title: "Pricing", href: "" }];
+
   return (
     <section className={s.sideBar}>
+      <form className={s.sideBar_form}>
+        <input
+          style={font.style}
+          placeholder="Search..."
+          type="text"
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+        />
+      </form>
       <section className={s.sideBar_posts}>
         <h3 style={font.style}>Recent Post</h3>
         <ul>

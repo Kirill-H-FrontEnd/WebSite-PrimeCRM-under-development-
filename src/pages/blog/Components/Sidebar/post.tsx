@@ -7,7 +7,7 @@ import { IRecentPosts } from "@/interfaces/posts";
 // Axios
 import axios from "axios";
 // Styles
-import s from "./sideBar.module.scss";
+import s from "./styles/sideBar.module.scss";
 // Components
 import Loader from "@/Components/UI/Loader/loader";
 import Error from "@/Components/UI/Error/error";

@@ -1,0 +1,33 @@
+@media screen and (max-width: 1024px) {
+    .sideBar {
+        h3 {
+            font-size: 30px;
+        }
+        .sideBar_posts {
+            ul {
+                .sideBar_post {
+                    svg {
+                        width: 60px;
+                        height: 60px;
+                    }
+                    div {
+                        h4 {
+                            font-size: 14px;
+                        }
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 845px) {
+    .sideBar {
+        margin-bottom: 50px;
+        .sideBar_posts {
+            display: none;
+        }
+    }
+}

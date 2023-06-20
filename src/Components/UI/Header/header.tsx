@@ -1,5 +1,5 @@
 // Styles
-import s from "./header.module.scss";
+import s from "./Header.module.scss";
 // Next
 import Link from "next/link";
 import Image from "next/image";
